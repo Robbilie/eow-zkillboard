@@ -2,9 +2,7 @@
 	"use strict";
 
 	Widget.initialize({
-		title: "zKillboard",
-		width: 300,
-		height: 400,
+		title: "EOW zKillboard"
 	}, widget => {
 
 		// debugging
