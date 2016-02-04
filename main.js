@@ -10,17 +10,10 @@
 		// debugging
 		console.log("widget", widget);
 		
-		var tabs = eowTabs("div", {}, [{
-			name: "zKillboard",
-			content: [
-				eowEl("webview", {
-					src: "https://zkillboard.com/",
-					className: "hideof"
-				})
-			]
-		}]);
+		widget.tabs.addTab("zKillboard", eowEl("webview", {
+			src: "https://zkillboard.com/",
+			className: "hideof"
+		}));
 		
-		widget.appendChild(tabs);
-		
-		tabs.selectTab("zKillboard");
+		widget.tabs.selectTab("zKillboard");
 	});
