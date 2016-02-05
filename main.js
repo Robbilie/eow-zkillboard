@@ -1,17 +1,16 @@
 	
 	"use strict";
 
-	Widget.initialize({
-		title: "EOW zKillboard"
-	}, widget => {
+	Widget.INSTANCE.loadPlugin({
+		title: "zKillboard",
+		name: "Robbilie/eow-zkillboard"
+	}, plugin => {
 
 		// debugging
-		console.log("widget", widget);
+		console.log("plugin", plugin);
 		
-		widget.tabs.addTab("zKillboard", eowEl("webview", {
+		plugin.getBody().appendChild(eowEl("webview", {
 			src: "https://zkillboard.com/",
 			className: "hideof"
 		}));
-		
-		widget.tabs.selectTab("zKillboard");
 	});
