@@ -10,7 +10,7 @@
 		console.log("plugin", plugin);
 		
 		plugin.getBody().appendChild(eowEl("webview", {
-			src: "https://zkillboard.com/",
-			className: "hideof"
-		}));
+			src: "https://zkillboard.com/"
+			}).on("dom-ready", function () { this.insertCSS(Widget.getTemplate("scrollbar")); })
+		);
 	});
